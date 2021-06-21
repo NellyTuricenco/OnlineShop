@@ -1,4 +1,6 @@
+@import "../../styles/variables.scss";
+
 .main {
-  background-color: yellow;
+  background-color: $light-color;
   flex-grow: 1;
 }

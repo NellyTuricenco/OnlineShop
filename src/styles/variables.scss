@@ -1,5 +1,18 @@
 //font
 $fz-default: 1.6rem;
-$ff-common: Arial, sans-serif;
-$fw-normal: 400;
+$ff-common: "Montserrat Alternates", sans-serif;
+$fw-normal: 500;
 $fw-bold: 700;
+
+//colors
+$primary-color: #f03a9b;
+$secondary-color: #ec14ec;
+$primary-lg: linear-gradient(
+  to right,
+  $primary-color,
+  $secondary-color
+); //background linear gradient
+
+$secondary-lg: linear-gradient(to right, #33001b, #ff0084);
+$light-color: pink;
+$pink-color: rgb(233, 51, 187);

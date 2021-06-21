@@ -1,4 +1,6 @@
+@import "../../styles/variables.scss";
+
 .sidebar {
-  background-color: orange;
+  background-color: $pink-color;
   width: 25rem;
 }
