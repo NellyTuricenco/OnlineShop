@@ -17,6 +17,7 @@ html {
 body {
   font-size: $fz-default;
   font-family: $ff-common;
+  color: $dark-color;
 }
 
 ul {
@@ -26,6 +27,7 @@ ul {
 button,
 input {
   font-size: $fz-default;
+  font-family: $ff-common;
 }
 
 .content-wrapper {

@@ -1,5 +1,5 @@
 import { Component } from "./core/Component";
-import { Header, Sidebar, Main, Footer } from "./components";
+import { Header, Toolbar, Sidebar, Main, Footer } from "./components";
 import "./App.scss";
 export class App extends Component {
   constructor({ title }) {
@@ -22,7 +22,7 @@ export class App extends Component {
 
     // this._node.append(header.toNode(), content, footer.toNode());
     this.findNode(".app__content")
-      .before(new Header({ title }))
+      .before([new Toolbar(), new Header({ title })])
       .after(new Footer());
   }
 }

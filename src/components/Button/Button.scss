@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+%base-button {
+  padding: 1rem 2.5rem;
+  border-radius: 0.3rem;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  &--primary {
+    @extend %base-button;
+    background-image: $primary-lg;
+  }
+  &--secondary {
+    @extend %base-button;
+    background-color: $light-color;
+    transition: box-shadow 300ms ease;
+    &:hover {
+      box-shadow: 0 0.4rem 1rem $shadow-color;
+    }
+    &:focus {
+      outline: 0.2rem solid $light-color;
+      outline-offset: 0.25rem;
+    }
+  }
+}

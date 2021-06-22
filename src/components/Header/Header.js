@@ -13,6 +13,11 @@ export class Header extends Component {
       </div>
       `,
     });
-    this.findNode(".header__title").after(new Button());
+    this.findNode(".header__title").after(
+      new Button({
+        className: "btn--secondary header__btn",
+        text: "Sign In",
+      })
+    );
   }
 }
