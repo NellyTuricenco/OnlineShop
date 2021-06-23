@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.toolbar {
+  padding: 1rem 2rem;
+  background-image: $secondary-lg;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

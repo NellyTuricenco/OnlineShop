@@ -1,10 +1,15 @@
 export class Component {
-  constructor({ tagName = "div", className, html, text }) {
+  constructor({ tagName = "div", className, attrs, html, text }) {
     this._node = document.createElement(tagName);
     this._foundNode = null;
     if (className) this._node.className = className;
     if (html) this._node.innerHTML = html;
     if (text) this._node.textContent = text;
+    for (const key in attrs) {
+      const attrValue = attrs[key];
+      if (!attrValue) continue;
+      this._node.setAttribute(key, attrValue);
+    }
   }
 
   toHTML() {
@@ -25,12 +30,12 @@ export class Component {
     const nodes = children.map((child) => child.toNode());
     (this._foundNode || this._node)[methodName](...nodes); //this._node.append(...nodes)
   }
-  append() {
+  append(components) {
     this._insert("append", components);
     return this;
   }
 
-  prepend() {
+  prepend(components) {
     this._insert("prepend", components);
     return this;
   }

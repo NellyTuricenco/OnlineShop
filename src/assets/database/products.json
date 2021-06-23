@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "category": "Smartphone",
+    "category": "Laptop",
     "model": "A12",
     "manufacturer": "Apple",
     "country": "USA",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "category": "Smartphone",
+    "category": "Laptop",
     "model": "B12",
     "manufacturer": "Apple",
     "country": "USA",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "category": "Smartphone",
+    "category": "Laptop",
     "model": "MS12",
     "manufacturer": "Apple",
     "country": "USA",
@@ -109,7 +109,7 @@
   },
   {
     "id": 10,
-    "category": "Smartphone",
+    "category": "Laptop",
     "model": "2323",
     "manufacturer": "Lenovo",
     "country": "China",
@@ -133,7 +133,7 @@
   },
   {
     "id": 12,
-    "category": "Smartphone",
+    "category": "Laptop",
     "model": "2723",
     "manufacturer": "Lenovo",
     "country": "China",
@@ -325,7 +325,7 @@
   },
   {
     "id": 28,
-    "category": "TV",
+    "category": "Laptop",
     "model": "5111",
     "manufacturer": "Sony",
     "country": "Japan",
@@ -337,7 +337,7 @@
   },
   {
     "id": 29,
-    "category": "TV",
+    "category": "Laptop",
     "model": "7811",
     "manufacturer": "Sony",
     "country": "Japan",
@@ -349,7 +349,7 @@
   },
   {
     "id": 30,
-    "category": "TV",
+    "category": "Laptop",
     "model": "9911",
     "manufacturer": "Sony",
     "country": "Japan",
@@ -421,7 +421,7 @@
   },
   {
     "id": 36,
-    "category": "TV",
+    "category": "Laptop",
     "model": "8888",
     "manufacturer": "Samsung",
     "country": "South Korea",
@@ -445,7 +445,7 @@
   },
   {
     "id": 38,
-    "category": "TV",
+    "category": "Laptop",
     "model": "117",
     "manufacturer": "Samsung",
     "country": "South Korea",
@@ -457,7 +457,7 @@
   },
   {
     "id": 39,
-    "category": "TV",
+    "category": "Laptop",
     "model": "1171",
     "manufacturer": "Samsung",
     "country": "South Korea",

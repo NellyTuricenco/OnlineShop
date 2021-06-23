@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.input {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  &:focus {
+    outline: 0.2rem solid $light-color;
+    outline-offset: 0.2rem;
+  }
+}

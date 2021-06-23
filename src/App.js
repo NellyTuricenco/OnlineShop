@@ -2,7 +2,7 @@ import { Component } from "./core/Component";
 import { Header, Toolbar, Sidebar, Main, Footer } from "./components";
 import "./App.scss";
 export class App extends Component {
-  constructor({ title }) {
+  constructor({ title, categories }) {
     const sidebar = new Sidebar();
     const main = new Main();
     super({
@@ -22,7 +22,7 @@ export class App extends Component {
 
     // this._node.append(header.toNode(), content, footer.toNode());
     this.findNode(".app__content")
-      .before([new Toolbar(), new Header({ title })])
+      .before([new Header({ title }), new Toolbar({ categories })])
       .after(new Footer());
   }
 }

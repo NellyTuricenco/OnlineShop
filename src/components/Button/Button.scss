@@ -3,6 +3,10 @@
 %base-button {
   padding: 1rem 2.5rem;
   border-radius: 0.3rem;
+  &:focus {
+    outline: 0.15rem solid $light-color;
+    outline-offset: 0.25rem;
+  }
 }
 .btn {
   cursor: pointer;
@@ -10,6 +14,13 @@
   &--primary {
     @extend %base-button;
     background-image: $primary-lg;
+    color: $light-color;
+    text-shadow: 0 0 0.2rem $dark-color;
+    transition: filter 200ms ease, text-shadow 200ms ease;
+    &:hover {
+      filter: brightness(1.5);
+      text-shadow: 0 0 0.3rem $dark-color;
+    }
   }
   &--secondary {
     @extend %base-button;
@@ -17,10 +28,6 @@
     transition: box-shadow 300ms ease;
     &:hover {
       box-shadow: 0 0.4rem 1rem $shadow-color;
-    }
-    &:focus {
-      outline: 0.2rem solid $light-color;
-      outline-offset: 0.25rem;
     }
   }
 }
