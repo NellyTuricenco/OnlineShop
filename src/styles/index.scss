@@ -30,6 +30,11 @@ input {
   font-family: $ff-common;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .content-wrapper {
   max-width: 145rem;
   width: 100%;

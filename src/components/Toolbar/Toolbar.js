@@ -1,5 +1,5 @@
 import { Component } from "../../core/Component";
-import { Button, Input } from "../";
+import { Button, InputWithIcon } from "../";
 import "./Toolbar.scss";
 
 export class Toolbar extends Component {
@@ -18,15 +18,20 @@ export class Toolbar extends Component {
         categories.map(
           (category) =>
             new Button({
-              className: "btn--primary toolbar__btn",
-              attrs: {
-                title: category,
-              },
+              className: "btn--primary btn--rect toolbar__btn",
+              title: category,
               text: category,
             })
         )
       )
       .findNode(".toolbar__search")
-      .append(new Input());
+      .append(
+        new InputWithIcon({
+          inputAttrs: {
+            placeholder: "Search",
+            name: "search",
+          },
+        })
+      );
   }
 }

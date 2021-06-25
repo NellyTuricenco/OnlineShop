@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .sidebar {
-  background-color: $pink-color;
+  background-color: $blue-color;
   width: 25rem;
+  flex-shrink: 0;
 }

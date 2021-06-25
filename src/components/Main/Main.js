@@ -1,12 +1,13 @@
 import { Component } from "../../core/Component";
+import { Products } from "../";
 import "./Main.scss";
 
 export class Main extends Component {
-  constructor() {
+  constructor({ products }) {
     super({
       tagName: "main",
       className: "main",
-      text: "Main",
+      children: new Products({ items: products }),
     });
   }
 }

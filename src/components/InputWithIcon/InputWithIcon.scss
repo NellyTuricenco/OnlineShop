@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.input-with-icon {
+  position: relative;
+  &__input {
+    padding-right: 3.8rem;
+  }
+  &__icon {
+    position: absolute;
+    top: calc(50% - 1.8rem / 2);
+    right: 1rem;
+    font-size: 1.8rem;
+    color: $dark-color;
+    pointer-events: none;
+  }
+}

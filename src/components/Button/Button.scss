@@ -1,16 +1,18 @@
 @import "../../styles/variables.scss";
 
 %base-button {
-  padding: 1rem 2.5rem;
-  border-radius: 0.3rem;
   &:focus {
-    outline: 0.15rem solid $light-color;
-    outline-offset: 0.25rem;
+    outline: 0.2rem solid $light-color;
+    outline-offset: 0.2rem;
   }
 }
 .btn {
   cursor: pointer;
   border: none;
+  &--rect {
+    padding: 1rem 2.5rem;
+    border-radius: 0.3rem;
+  }
   &--primary {
     @extend %base-button;
     background-image: $primary-lg;

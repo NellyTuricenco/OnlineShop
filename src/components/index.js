@@ -5,3 +5,6 @@ export { Footer } from "./Footer/Footer";
 export { Main } from "./Main/Main";
 export { Sidebar } from "./Sidebar/Sidebar";
 export { Toolbar } from "./Toolbar/Toolbar";
+export { InputWithIcon } from "./InputWithIcon/InputWithIcon";
+export { Products } from "./Products/Products";
+export { Product } from "./Product/Product";

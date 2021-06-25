@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+
+$line-style: 0.2rem solid $blue-color;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  box-shadow: 0 0.4rem 0.8rem $shadow-color;
+  border-radius: 0.3rem;
+  &__top {
+    padding-bottom: 2rem;
+    border-bottom: $line-style;
+    margin-bottom: 2rem;
+  }
+  &__main {
+    display: flex;
+  }
+  &__img-wrapper {
+    width: 21rem;
+    height: 17rem;
+    flex-shrink: 0;
+  }
+  &__img {
+    height: 100%;
+    object-fit: contain;
+  }
+  &__description {
+    padding: 2rem;
+    background-color: rgba($blue-color, 0.2);
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  &__bottom {
+    display: flex;
+    border-top: $line-style;
+    padding-top: 2rem;
+  }
+  &__price {
+    flex-grow: 1;
+    margin-right: 2rem;
+    border-right: $line-style;
+  }
+  &__label {
+    display: block;
+  }
+  &__value {
+    font-size: 2.4rem;
+    font-weight: $fw-bold;
+  }
+  &__currency {
+    font-size: 2rem;
+    font-weight: $fw-bold;
+  }
+  &__btn {
+    $size: 5rem;
+
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}

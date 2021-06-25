@@ -5,6 +5,7 @@ import "./styles/index.scss";
 
 const props = {
   title: "Online Shop",
+  products,
   categories: [...new Set(products.map((p) => p.category))],
 };
 

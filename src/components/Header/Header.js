@@ -15,10 +15,8 @@ export class Header extends Component {
     });
     this.findNode(".header__title").after(
       new Button({
-        className: "btn--secondary header__btn",
-        attrs: {
-          title: "Sign In",
-        },
+        className: "btn--secondary btn--rect header__btn",
+        title: "Sign In",
         text: "Sign In",
       })
     );

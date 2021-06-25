@@ -1,10 +1,13 @@
 export class Component {
-  constructor({ tagName = "div", className, attrs, html, text }) {
+  constructor({ tagName = "div", className, attrs, html, text, children }) {
     this._node = document.createElement(tagName);
     this._foundNode = null;
+
     if (className) this._node.className = className;
     if (html) this._node.innerHTML = html;
     if (text) this._node.textContent = text;
+    if (children) this._insert("append", children);
+
     for (const key in attrs) {
       const attrValue = attrs[key];
       if (!attrValue) continue;

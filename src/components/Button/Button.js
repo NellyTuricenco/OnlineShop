@@ -4,14 +4,18 @@ import { Component } from "../../core/Component";
 import "./Button.scss";
 
 export class Button extends Component {
-  constructor({ className, text, attrs } = {}) {
+  constructor({ className, title, attrs = {}, text, html } = {}) {
     super({
       tagName: "button",
       className: cn("btn", {
         [className]: className,
       }),
-      attrs,
+      attrs: {
+        title,
+        ...attrs,
+      },
       text,
+      html,
     });
   }
 }

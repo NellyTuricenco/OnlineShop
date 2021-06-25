@@ -5,8 +5,8 @@ $fw-normal: 500;
 $fw-bold: 700;
 
 //colors
-$primary-color: #f03a9b;
-$secondary-color: #ec14ec;
+$primary-color: #2980b9;
+$secondary-color: #6dd5fa;
 $primary-lg: linear-gradient(
   to right,
   $primary-color,
@@ -14,7 +14,7 @@ $primary-lg: linear-gradient(
 ); //background linear gradient
 $dark-color: #111;
 
-$secondary-lg: linear-gradient(to right, #33001b, #ff0084);
-$light-color: pink;
-$pink-color: rgb(233, 51, 187);
+$secondary-lg: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+$light-color: white;
+$blue-color: rgb(159, 225, 241);
 $shadow-color: rgba(black, 0.2);
