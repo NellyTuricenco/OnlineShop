@@ -1,9 +1,11 @@
-import { Component } from "../../core/Component";
+import cn from "classnames";
+
+import { Component } from "../../core";
 import { Button, InputWithIcon } from "../";
 import "./Toolbar.scss";
 
 export class Toolbar extends Component {
-  constructor({ categories }) {
+  constructor({ gs, categories }) {
     super({
       className: "toolbar",
       html: `
@@ -13,12 +15,23 @@ export class Toolbar extends Component {
       </div>
       `,
     });
-    this.findNode(".toolbar__nav")
+
+    this.gs = gs;
+
+    this.addListeners({
+      click: this.handleCategoryChange.bind(this),
+    })
+      .findNode(".toolbar__nav")
       .append(
         categories.map(
-          (category) =>
+          (category, i) =>
             new Button({
-              className: "btn--primary btn--rect toolbar__btn",
+              className: cn("btn--secondary btn--rect toolbar__btn", {
+                "toolbar__btn--active": !i,
+              }),
+              attrs: {
+                "data-category": category,
+              },
               title: category,
               text: category,
             })
@@ -33,5 +46,21 @@ export class Toolbar extends Component {
           },
         })
       );
+  }
+  handleCategoryChange(e) {
+    const button = e.target;
+    if (button.tagName !== "BUTTON") return;
+    this.findNode(".toolbar__btn--active")
+      .removeClass("toolbar__btn--active")
+      .setNode(button)
+      .addClass("toolbar__btn--active");
+
+    const { category } = button.dataset;
+    const { products } = this.gs.getState();
+
+    this.gs.setState({
+      activeCategory: category,
+      filteredProducts: products.filter((p) => p.category === category),
+    });
   }
 }

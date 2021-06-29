@@ -1,4 +1,4 @@
-import { Component } from "../../core/Component";
+import { Component } from "../../core";
 import { Button, Rating } from "../";
 
 import "./product.scss";

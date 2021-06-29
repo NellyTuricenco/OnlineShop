@@ -1,4 +1,4 @@
-import { Component } from "../../core/Component";
+import { Component } from "../../core";
 import "./Sidebar.scss";
 
 export class Sidebar extends Component {

@@ -1,6 +1,6 @@
 import cn from "classnames";
 
-import { Component } from "../../core/Component";
+import { Component } from "../../core";
 import "./Rating.scss";
 
 export class Rating extends Component {

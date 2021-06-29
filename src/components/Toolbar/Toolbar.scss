@@ -11,10 +11,17 @@
 
   &__btn {
     margin-right: 1rem;
+    transition: background-color 200ms ease, color 200ms ease;
+
     &:last-child {
       margin-right: 0;
     }
+    &--active {
+      background-color: $blue-color;
+      color: $light-color;
+    }
   }
+
   &__search {
     max-width: 30rem;
     width: 100%;

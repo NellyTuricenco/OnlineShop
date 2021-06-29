@@ -1,10 +1,10 @@
-import { Component } from "./core/Component";
+import { Component } from "./core";
 import { Header, Toolbar, Sidebar, Main, Footer } from "./components";
 import "./App.scss";
 export class App extends Component {
-  constructor({ title, products, categories }) {
+  constructor({ gs, title, categories }) {
     const sidebar = new Sidebar();
-    const main = new Main({ products });
+    const main = new Main({ gs });
     super({
       className: "app",
       html: `
@@ -15,7 +15,7 @@ export class App extends Component {
     });
 
     this.findNode(".app__content")
-      .before([new Header({ title }), new Toolbar({ categories })])
+      .before([new Header({ title }), new Toolbar({ gs, categories })])
       .after(new Footer());
   }
 }

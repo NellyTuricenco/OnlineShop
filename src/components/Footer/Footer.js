@@ -1,4 +1,4 @@
-import { Component } from "../../core/Component";
+import { Component } from "../../core";
 import "./Footer.scss";
 
 export class Footer extends Component {

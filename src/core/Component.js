@@ -1,5 +1,13 @@
 export class Component {
-  constructor({ tagName = "div", className, attrs, html, text, children }) {
+  constructor({
+    subscribe,
+    tagName = "div",
+    className,
+    attrs,
+    html,
+    text,
+    children,
+  }) {
     this._node = document.createElement(tagName);
     this._foundNode = null;
 
@@ -25,6 +33,11 @@ export class Component {
 
   findNode(selector) {
     this._foundNode = this._node.querySelector(selector);
+    return this;
+  }
+
+  setNode(node) {
+    this._foundNode = node;
     return this;
   }
 
@@ -57,5 +70,27 @@ export class Component {
     return this;
   }
 
-  truncate() {}
+  truncate() {
+    (this._foundNode || this._node).innerHTML = "";
+    return this;
+  }
+
+  addListeners(listeners) {
+    for (const eventType in listeners) {
+      const eventHandler = listeners[eventType];
+      if (typeof eventHandler !== "function") continue;
+      (this._foundNode || this._node).addEventListener(eventType, eventHandler);
+    }
+    return this;
+  }
+
+  addClass(className) {
+    (this._foundNode || this._node).classList.add(className);
+    return this;
+  }
+
+  removeClass(className) {
+    (this._foundNode || this._node).classList.remove(className);
+    return this;
+  }
 }
