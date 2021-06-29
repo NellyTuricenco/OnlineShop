@@ -1,5 +1,5 @@
 import { Component } from "../../core/Component";
-import { Button } from "../";
+import { Button, Rating } from "../";
 
 import "./product.scss";
 
@@ -12,15 +12,21 @@ export class Product extends Component {
     country,
     imageSrc,
     price,
-    rating,
+    rating: current,
     description,
     warranty,
   }) {
+    const rating = new Rating({
+      max: 5,
+      current,
+      className: "product__rating",
+    });
     super({
       className: "product",
       html: `
     <div class="product__top">
         <h2 class="product__category">${category}</h2>
+        ${rating.toHTML()}
     </div>
 
     <div class="product__middle">
@@ -30,9 +36,9 @@ export class Product extends Component {
                 <image src="${imageSrc}" alt="${model}" title="${model}" class="product__img">
             </div>
         
-            <div class="product-details">
+            <div class="product__details">
                 <h2 class="product__model">${model}</h2>
-                <h4 class="product__manufacturer">${manufacturer}</h4>
+                <h5 class="product__manufacturer">${manufacturer}</h5>
                 <h5 class="product__country">${country}</h5>
                 <h6 class="product__warranty">${warranty}</h6>
             </div>

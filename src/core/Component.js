@@ -33,6 +33,10 @@ export class Component {
     const nodes = children.map((child) => child.toNode());
     (this._foundNode || this._node)[methodName](...nodes); //this._node.append(...nodes)
   }
+  html(htmlString) {
+    (this._foundNode || this._node).innerHTML = htmlString;
+    return this;
+  }
   append(components) {
     this._insert("append", components);
     return this;

@@ -9,10 +9,24 @@ $line-style: 0.2rem solid $blue-color;
   padding: 2rem;
   box-shadow: 0 0.4rem 0.8rem $shadow-color;
   border-radius: 0.3rem;
+  transition: box-shadow 200ms ease;
+  &:hover {
+    box-shadow: 0 0.4rem 0.8rem $shadow-color, inset 0 0 0 0.3rem $light-color,
+      inset 0 0 0 0.5rem $blue-color;
+  }
   &__top {
     padding-bottom: 2rem;
     border-bottom: $line-style;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__category {
+    font-size: 1.6rem;
+  }
+  &__rating {
+    color: $primary-color;
   }
   &__main {
     display: flex;
@@ -25,6 +39,11 @@ $line-style: 0.2rem solid $blue-color;
   &__img {
     height: 100%;
     object-fit: contain;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   &__description {
     padding: 2rem;

@@ -31,7 +31,7 @@
     "country": "USA",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/5.jpg",
     "price": 24000,
-    "rating": 5,
+    "rating": 3,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -91,7 +91,7 @@
     "country": "Japan",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/2.jpg",
     "price": 24000,
-    "rating": 5,
+    "rating": 4,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -151,7 +151,7 @@
     "country": "China",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/8.jpg",
     "price": 24000,
-    "rating": 5,
+    "rating": 3,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -199,7 +199,7 @@
     "country": "Japan",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg",
     "price": 57000,
-    "rating": 5,
+    "rating": 4,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -259,7 +259,7 @@
     "country": "Holland",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg",
     "price": 42000,
-    "rating": 5,
+    "rating": 3,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -295,7 +295,7 @@
     "country": "Holland",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg",
     "price": 46500,
-    "rating": 5,
+    "rating": 4,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -331,7 +331,7 @@
     "country": "Japan",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/7.jpg",
     "price": 42090,
-    "rating": 5,
+    "rating": 3,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -367,7 +367,7 @@
     "country": "Japan",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg",
     "price": 38000,
-    "rating": 5,
+    "rating": 4,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
@@ -391,7 +391,7 @@
     "country": "Holland",
     "imageSrc": "https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg",
     "price": 42570,
-    "rating": 5,
+    "rating": 3,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellendus dignissimos esse beatae delectus cumque! Sed, nostrum fugiat qui, maxime aliquam ullam quidem beatae ipsa at accusantium repudiandae quos mollitia?",
     "warranty": "2 years"
   },
