@@ -4,6 +4,7 @@ import { Component } from "../../core";
 import { Button, InputWithIcon } from "../";
 import "./Toolbar.scss";
 
+const DEFAULT_PAGE = 1;
 export class Toolbar extends Component {
   constructor({ gs, categories }) {
     super({
@@ -51,16 +52,19 @@ export class Toolbar extends Component {
   }
   handleCategoryChange(e) {
     const button = e.target;
+
     if (button.tagName !== "BUTTON") return;
+
     this.findNode(".toolbar__btn--active")
       .removeClass("toolbar__btn--active")
-      .setNode(button)
+      .findNode(button)
       .addClass("toolbar__btn--active");
 
     const { category } = button.dataset;
     const { products } = this.gs.getState();
 
     this.gs.setState({
+      activePage: DEFAULT_PAGE,
       activeCategory: category,
       filteredProducts: products.filter((p) => p.category === category),
     });

@@ -23,13 +23,12 @@ export class Component {
     return this._node;
   }
 
-  findNode(selector) {
-    this._foundNode = this._node.querySelector(selector);
-    return this;
-  }
-
-  setNode(node) {
-    this._foundNode = node;
+  findNode(node) {
+    if (typeof node === "string") {
+      this._foundNode = this._node.querySelector(node);
+    } else {
+      this._foundNode = node;
+    }
     return this;
   }
 

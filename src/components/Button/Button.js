@@ -11,6 +11,7 @@ export class Button extends Component {
         [className]: className,
       }),
       attrs: {
+        type: "button",
         title,
         ...attrs,
       },

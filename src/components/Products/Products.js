@@ -7,26 +7,31 @@ export class Products extends Component {
     super({ className: "products" });
 
     gs.subscribe(this);
+    this._drawProductList = this._drawProductList.bind(this, perPage);
 
     const { filteredProducts, activePage } = gs.getState();
 
-    const productList = filteredProducts
-      .map((data) => new Product(data))
-      .slice((activePage - 1) * perPage, activePage * perPage);
+    const productList = this._drawProductList(filteredProducts, activePage);
 
     this.append(productList);
   }
+
+  _drawProductList(perPage, products, activePage) {
+    return products
+      .map((data) => new Product(data))
+      .slice((activePage - 1) * perPage, activePage * perPage);
+  }
+
   _render(prevState, nextState) {
-    if (prevState.activeCategory === nextState.activeCategory) return;
+    const areEqualCategories =
+      prevState.activeCategory === nextState.activeCategory;
+    const areEqualPages = prevState.activePage === nextState.activePage;
 
-    const { filteredProducts } = nextState;
+    if (areEqualCategories && areEqualPages) return;
 
-    const productsContainer = document.querySelector(".products");
-    productsContainer.innerHTML = "";
-    productsContainer.append(
-      ...filteredProducts.map((data) => new Product(data).toNode())
-    );
-    //TODO current functionality is not working properly
-    // this.truncate().append(filteredProducts.map((data) => new Product(data)));
+    const { filteredProducts, activePage } = nextState;
+    const productList = this._drawProductList(filteredProducts, activePage);
+
+    this.truncate().append(productList);
   }
 }

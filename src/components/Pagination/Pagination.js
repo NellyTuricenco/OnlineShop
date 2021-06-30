@@ -12,11 +12,28 @@ export class Pagination extends Component {
         [className]: className,
       }),
     });
+    this.gs = gs;
+    this._drawPaginationButtons = this._drawPaginationButtons.bind(
+      this,
+      perPage
+    );
+
     gs.subscribe(this);
 
     const { activePage, filteredProducts } = gs.getState();
 
-    const max = Math.ceil(filteredProducts.length / perPage);
+    const buttons = this._drawPaginationButtons(
+      filteredProducts.length,
+      activePage
+    );
+
+    this.append(buttons).addListeners({
+      click: this.handlePageChange.bind(this),
+    });
+  }
+
+  _drawPaginationButtons(perPage, totalAmount, activePage) {
+    const max = Math.ceil(totalAmount / perPage);
     const buttons = [];
 
     for (let i = 0; i < max; i++) {
@@ -24,7 +41,7 @@ export class Pagination extends Component {
 
       buttons.push(
         new Button({
-          className: cn("btn--primary pagination__btn", {
+          className: cn("pagination__btn", {
             "pagination__btn--active": activePage === pageNumber,
           }),
           attrs: {
@@ -35,6 +52,34 @@ export class Pagination extends Component {
         })
       );
     }
-    this.append(buttons);
+    return buttons;
+  }
+
+  _render(prevState, nextState) {
+    if (prevState.activeCategory === nextState.activeCategory) return;
+
+    const { filteredProducts, activePage } = nextState;
+
+    const buttons = this._drawPaginationButtons(
+      filteredProducts.length,
+      activePage
+    );
+    this._node.innerHTML = "";
+    this._node.append(...buttons.map((b) => b.toNode()));
+    // this.truncate().append(buttons);
+  }
+
+  handlePageChange(e) {
+    const button = e.target;
+
+    if (button.tagName !== "BUTTON") return;
+
+    this.findNode(".pagination__btn--active")
+      .removeClass("pagination__btn--active")
+      .findNode(button)
+      .addClass("pagination__btn--active");
+
+    const { page } = button.dataset;
+    this.gs.setState({ activePage: +page });
   }
 }
