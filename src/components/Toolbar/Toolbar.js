@@ -18,16 +18,18 @@ export class Toolbar extends Component {
 
     this.gs = gs;
 
+    const { activeCategory } = gs.getState();
+
     this.addListeners({
       click: this.handleCategoryChange.bind(this),
     })
       .findNode(".toolbar__nav")
       .append(
         categories.map(
-          (category, i) =>
+          (category) =>
             new Button({
               className: cn("btn--secondary btn--rect toolbar__btn", {
-                "toolbar__btn--active": !i,
+                "toolbar__btn--active": category === activeCategory,
               }),
               attrs: {
                 "data-category": category,

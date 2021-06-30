@@ -9,3 +9,4 @@ export { InputWithIcon } from "./InputWithIcon/InputWithIcon";
 export { Products } from "./Products/Products";
 export { Product } from "./Product/Product";
 export { Rating } from "./Rating/Rating";
+export { Pagination } from "./Pagination/Pagination";

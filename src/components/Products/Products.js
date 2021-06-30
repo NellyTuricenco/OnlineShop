@@ -3,14 +3,18 @@ import { Product } from "../";
 import "./products.scss";
 
 export class Products extends Component {
-  constructor({ gs }) {
+  constructor({ gs, perPage }) {
     super({ className: "products" });
 
     gs.subscribe(this);
 
-    const { filteredProducts } = gs.getState();
+    const { filteredProducts, activePage } = gs.getState();
 
-    this.append(filteredProducts.map((data) => new Product(data)));
+    const productList = filteredProducts
+      .map((data) => new Product(data))
+      .slice((activePage - 1) * perPage, activePage * perPage);
+
+    this.append(productList);
   }
   _render(prevState, nextState) {
     if (prevState.activeCategory === nextState.activeCategory) return;
@@ -22,6 +26,7 @@ export class Products extends Component {
     productsContainer.append(
       ...filteredProducts.map((data) => new Product(data).toNode())
     );
+    //TODO current functionality is not working properly
     // this.truncate().append(filteredProducts.map((data) => new Product(data)));
   }
 }

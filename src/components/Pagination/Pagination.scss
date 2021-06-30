@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  &__btn {
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

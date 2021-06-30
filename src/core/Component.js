@@ -1,13 +1,5 @@
 export class Component {
-  constructor({
-    subscribe,
-    tagName = "div",
-    className,
-    attrs,
-    html,
-    text,
-    children,
-  }) {
+  constructor({ tagName = "div", className, attrs, html, text, children }) {
     this._node = document.createElement(tagName);
     this._foundNode = null;
 
@@ -38,6 +30,11 @@ export class Component {
 
   setNode(node) {
     this._foundNode = node;
+    return this;
+  }
+
+  resetNode() {
+    this._foundNode = null;
     return this;
   }
 

@@ -2,9 +2,9 @@ import { Component } from "./core";
 import { Header, Toolbar, Sidebar, Main, Footer } from "./components";
 import "./App.scss";
 export class App extends Component {
-  constructor({ gs, title, categories }) {
+  constructor({ gs, perPage, title, categories }) {
     const sidebar = new Sidebar();
-    const main = new Main({ gs });
+    const main = new Main({ gs, perPage });
     super({
       className: "app",
       html: `
