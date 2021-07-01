@@ -64,9 +64,7 @@ export class Pagination extends Component {
       filteredProducts.length,
       activePage
     );
-    this._node.innerHTML = "";
-    this._node.append(...buttons.map((b) => b.toNode()));
-    // this.truncate().append(buttons);
+    this.truncate().append(buttons);
   }
 
   handlePageChange(e) {
@@ -77,7 +75,8 @@ export class Pagination extends Component {
     this.findNode(".pagination__btn--active")
       .removeClass("pagination__btn--active")
       .findNode(button)
-      .addClass("pagination__btn--active");
+      .addClass("pagination__btn--active")
+      .resetNode();
 
     const { page } = button.dataset;
     this.gs.setState({ activePage: +page });

@@ -11,7 +11,7 @@ export class GlobalState {
 
   setState(updatedState) {
     const nextState = {
-      ...this._prevState,
+      ...this._state,
       ...updatedState,
     };
     this._prevState = this._state;
