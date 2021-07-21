@@ -1,7 +1,13 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .sidebar {
-  background-color: $blue-color;
-  width: 25rem;
-  flex-shrink: 0;
+  display: none;
+
+  @include media(1200) {
+    display: block;
+    background-color: $blue-color;
+    width: 25rem;
+    flex-shrink: 0;
+  }
 }

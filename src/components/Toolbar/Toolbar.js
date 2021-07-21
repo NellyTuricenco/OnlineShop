@@ -43,6 +43,7 @@ export class Toolbar extends Component {
       .findNode(".toolbar__search")
       .append(
         new InputWithIcon({
+          inputClassName: "toolbar__input",
           inputAttrs: {
             placeholder: "Search",
             name: "search",

@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .header {
   background-image: $primary-lg;
@@ -12,5 +13,14 @@
     font-size: 2.5rem;
     color: $light-color;
     text-shadow: 0 0 0.2rem $dark-color;
+  }
+  &__btn {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.3rem;
+
+    @include media(576) {
+      font-size: 1.6rem;
+      padding: 1rem 2.5rem;
+    }
   }
 }

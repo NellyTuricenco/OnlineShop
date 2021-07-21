@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 $line-style: 0.2rem solid $blue-color;
 
@@ -7,12 +8,16 @@ $line-style: 0.2rem solid $blue-color;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
+  max-width: 43rem;
   box-shadow: 0 0.4rem 0.8rem $shadow-color;
   border-radius: 0.3rem;
   transition: box-shadow 200ms ease;
   &:hover {
     box-shadow: 0 0.4rem 0.8rem $shadow-color, inset 0 0 0 0.3rem $light-color,
       inset 0 0 0 0.5rem $blue-color;
+  }
+  @include media(992) {
+    max-width: none;
   }
   &__top {
     padding-bottom: 2rem;
@@ -30,11 +35,22 @@ $line-style: 0.2rem solid $blue-color;
   }
   &__main {
     display: flex;
+    flex-direction: column;
+
+    @include media(768) {
+      flex-direction: row;
+    }
   }
   &__img-wrapper {
-    width: 21rem;
+    width: 100%;
+    max-width: 21rem;
     height: 17rem;
     flex-shrink: 0;
+    margin: 0 auto;
+
+    @include media(768) {
+      margin: 0;
+    }
   }
   &__img {
     height: 100%;
@@ -44,6 +60,11 @@ $line-style: 0.2rem solid $blue-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2rem 0;
+
+    @include media(768) {
+      margin: 0;
+    }
   }
   &__description {
     padding: 2rem;

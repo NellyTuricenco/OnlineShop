@@ -1,5 +1,15 @@
+@import "../../styles/mixins.scss";
+
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
+  justify-items: center;
+
+  @include media(700) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(992) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

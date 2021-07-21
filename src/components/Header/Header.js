@@ -1,5 +1,6 @@
 import { Component } from "../../core";
-import { Button } from "../";
+import { Button, ModalWindow, Auth } from "../";
+import { render } from "../../core/render";
 import "./Header.scss";
 
 export class Header extends Component {
@@ -18,7 +19,14 @@ export class Header extends Component {
         className: "btn--secondary btn--rect header__btn",
         title: "Sign In",
         text: "Sign In",
+        onClick: this.handleModalOpen.bind(this),
       })
     );
+  }
+  handleModalOpen() {
+    const modalWindow = new ModalWindow({
+      children: new Auth(),
+    });
+    render(modalWindow, document.getElementById("modal-root"));
   }
 }

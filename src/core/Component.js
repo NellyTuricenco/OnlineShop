@@ -71,6 +71,11 @@ export class Component {
     return this;
   }
 
+  remove() {
+    (this._foundNode || this._node).remove();
+    return this;
+  }
+
   addListeners(listeners) {
     for (const eventType in listeners) {
       const eventHandler = listeners[eventType];
