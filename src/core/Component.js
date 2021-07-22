@@ -46,6 +46,10 @@ export class Component {
     (this._foundNode || this._node).innerHTML = htmlString;
     return this;
   }
+  text(textValue) {
+    (this._foundNode || this._node).textContent = textValue;
+    return this;
+  }
   append(components) {
     this._insert("append", components);
     return this;

@@ -19,6 +19,7 @@ export class Input extends Component {
       }),
       attrs: {
         name,
+        type,
         placeholder,
         autocomplete,
         ...attrs,
