@@ -2,6 +2,7 @@ import { Component } from "../../core";
 import { Input, InputWithIcon, Button } from "../";
 // import { sendRequest } from "../../utils/sendRequest";
 import "./Auth.scss";
+import { ModalWindow } from "../ModalWindow/ModalWindow";
 
 const SIGN_IN = "SIGN_IN";
 const SIGN_UP = "SIGN_UP";
@@ -28,9 +29,10 @@ export class Auth extends Component {
     this.findNode(".auth__fields").after([
       new Button({
         type: "submit",
-        className: "btn--primary btn--rect ",
+        className: "btn--primary btn--rect btn--submit",
         title: "Submit",
         text: "Submit",
+        // onClick: ,
       }),
       new Button({
         className: "btn--rect auth__btn",
@@ -52,6 +54,8 @@ export class Auth extends Component {
       const { name, value } = element;
 
       formData[name] = value;
+      this.findNode(".backdrop").remove();
+      // document.getElementById("modal-root").remove();
     }
     // sendRequest({
     //   url: "https://jsonplaceholder.typicode.com/users",
@@ -83,6 +87,9 @@ export class Auth extends Component {
           type: "email",
           name: "email",
           placeholder: "E-mail",
+          attrs: {
+            required: true,
+          },
         }),
         new InputWithIcon({
           wrapperClassName: "auth__field",
@@ -90,6 +97,7 @@ export class Auth extends Component {
             name: "password",
             type: "password",
             placeholder: "Password",
+            required: true,
           },
           icon: '<i class="fas fa-eye input-with-icon__icon auth__icon"></i>',
         }),
@@ -108,23 +116,35 @@ export class Auth extends Component {
           className: "auth__field",
           name: "firstName",
           placeholder: "First name",
+          attrs: {
+            required: true,
+          },
         }),
         new Input({
           className: "auth__field",
           name: "lastName",
           placeholder: "Last name",
+          attrs: {
+            required: true,
+          },
         }),
         new Input({
           className: "auth__field",
           type: "number",
           name: "age",
           placeholder: "Age",
+          attrs: {
+            required: true,
+          },
         }),
         new Input({
           className: "auth__field",
           type: "email",
           name: "email",
           placeholder: "E-mail",
+          attrs: {
+            required: true,
+          },
         }),
         new InputWithIcon({
           wrapperClassName: "auth__field",
@@ -132,6 +152,7 @@ export class Auth extends Component {
             name: "password",
             type: "password",
             placeholder: "Password",
+            required: true,
           },
           icon: '<i class="fas fa-eye input-with-icon__icon auth__icon"></i>',
         }),
@@ -141,6 +162,7 @@ export class Auth extends Component {
             name: "confirmPassword",
             type: "password",
             placeholder: "Confirm password",
+            required: true,
           },
           icon: '<i class="fas fa-eye input-with-icon__icon auth__icon"></i>',
         }),
