@@ -22,7 +22,7 @@ export class InputWithIcon extends Component {
         [wrapperClassName]: wrapperClassName,
       }),
       attrs: wrapperAttrs,
-      html: icon,
+      html: `<span>${icon}</span>`,
     });
     this.prepend(
       new Input({

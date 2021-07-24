@@ -2,7 +2,6 @@ import { Component } from "../../core";
 import { Input, InputWithIcon, Button } from "../";
 // import { sendRequest } from "../../utils/sendRequest";
 import "./Auth.scss";
-import { ModalWindow } from "../ModalWindow/ModalWindow";
 
 const SIGN_IN = "SIGN_IN";
 const SIGN_UP = "SIGN_UP";
@@ -99,7 +98,9 @@ export class Auth extends Component {
             placeholder: "Password",
             required: true,
           },
-          icon: '<i class="fas fa-eye input-with-icon__icon auth__icon"></i>',
+          icon: '<i class="fas fa-eye input-with-icon__icon auth__icon icon__hide"></i>',
+
+          // icon: '<i class="fas fa-eye-slash input-with-icon__icon auth__icon icon__show"></i>',
         }),
       ])
       .findNode(".auth__btn")
